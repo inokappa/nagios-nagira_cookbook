@@ -1,0 +1,824 @@
+I, [2014-02-09T17:57:06.678687 #16510]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+I, [2014-02-09T17:57:06.804490 #16510]  INFO -- Kitchen: -----> Creating <default-debian-6>...
+I, [2014-02-09T17:57:07.867156 #16510]  INFO -- Kitchen: -----> Kitchen is finished. (0m1.19s)
+I, [2014-02-09T17:57:17.251766 #16590]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+I, [2014-02-09T17:57:17.346488 #16590]  INFO -- Kitchen: -----> Cleaning up any prior instances of <default-debian-6>
+I, [2014-02-09T17:57:17.349418 #16590]  INFO -- Kitchen: -----> Destroying <default-debian-6>...
+I, [2014-02-09T17:57:17.787139 #16590]  INFO -- Kitchen: -----> Testing <default-debian-6>
+I, [2014-02-09T17:57:17.787608 #16590]  INFO -- Kitchen: -----> Creating <default-debian-6>...
+I, [2014-02-09T17:57:18.766994 #16590]  INFO -- Kitchen: -----> Converging <default-debian-6>...
+E, [2014-02-09T18:04:23.626033 #16590] ERROR -- Kitchen: Converge failed on instance <default-debian-6>.
+I, [2014-02-09T18:08:41.977117 #2827]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+I, [2014-02-09T18:08:42.095569 #2827]  INFO -- Kitchen: -----> Destroying <default-ubuntu>...
+I, [2014-02-09T18:08:42.099193 #2827]  INFO -- Kitchen: -----> Kitchen is finished. (0m0.12s)
+I, [2014-02-09T18:08:55.611577 #2838]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+I, [2014-02-09T18:08:55.704328 #2838]  INFO -- Kitchen: -----> Cleaning up any prior instances of <default-ubuntu>
+I, [2014-02-09T18:08:55.704952 #2838]  INFO -- Kitchen: -----> Destroying <default-ubuntu>...
+I, [2014-02-09T18:08:55.708244 #2838]  INFO -- Kitchen: -----> Testing <default-ubuntu>
+I, [2014-02-09T18:08:55.708681 #2838]  INFO -- Kitchen: -----> Creating <default-ubuntu>...
+E, [2014-02-09T18:20:44.467931 #2838] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T18:20:44.468236 #2838] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2014-02-09T18:20:44.468346 #2838] ERROR -- Kitchen: Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of docker -H tcp://127.0.0.1:4243 build - ----
+STDOUT: Step 1 : FROM stackbrew/ubuntu:saucy
+Pulling repository stackbrew/ubuntu
+STDERR: Uploading context 2.048 kB
+Uploading context 
+2014/02/09 18:20:44 Could not find repository on any of the indexed registries.
+---- End output of docker -H tcp://127.0.0.1:4243 build - ----
+Ran docker -H tcp://127.0.0.1:4243 build - returned 1]
+E, [2014-02-09T18:20:44.468436 #2838] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T18:20:44.468521 #2838] ERROR -- Kitchen: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2014-02-09T18:20:44.468604 #2838] ERROR -- Kitchen: Message: Expected process to exit with [0], but received '1'
+---- Begin output of docker -H tcp://127.0.0.1:4243 build - ----
+STDOUT: Step 1 : FROM stackbrew/ubuntu:saucy
+Pulling repository stackbrew/ubuntu
+STDERR: Uploading context 2.048 kB
+Uploading context 
+2014/02/09 18:20:44 Could not find repository on any of the indexed registries.
+---- End output of docker -H tcp://127.0.0.1:4243 build - ----
+Ran docker -H tcp://127.0.0.1:4243 build - returned 1
+E, [2014-02-09T18:20:44.468690 #2838] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T18:20:44.468772 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/shell_out.rb:70:in `rescue in run_command'
+E, [2014-02-09T18:20:44.468856 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/shell_out.rb:59:in `run_command'
+E, [2014-02-09T18:20:44.468939 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver/base.rb:158:in `run_command'
+E, [2014-02-09T18:20:44.469023 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/kitchen-docker-0.13.0/lib/kitchen/driver/docker.rb:92:in `docker_command'
+E, [2014-02-09T18:20:44.469109 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/kitchen-docker-0.13.0/lib/kitchen/driver/docker.rb:143:in `build_image'
+E, [2014-02-09T18:20:44.469194 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/kitchen-docker-0.13.0/lib/kitchen/driver/docker.rb:65:in `create'
+E, [2014-02-09T18:20:44.469295 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:273:in `public_send'
+E, [2014-02-09T18:20:44.469383 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:273:in `block in perform_action'
+E, [2014-02-09T18:20:44.469467 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:308:in `call'
+E, [2014-02-09T18:20:44.469549 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:308:in `synchronize_or_call'
+E, [2014-02-09T18:20:44.469633 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:283:in `block in action'
+E, [2014-02-09T18:20:44.469714 #2838] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T18:20:44.469794 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:282:in `action'
+E, [2014-02-09T18:20:44.469876 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:273:in `perform_action'
+E, [2014-02-09T18:20:44.469957 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:252:in `create_action'
+E, [2014-02-09T18:20:44.470039 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:246:in `block in transition_to'
+E, [2014-02-09T18:20:44.470123 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:245:in `each'
+E, [2014-02-09T18:20:44.470204 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:245:in `transition_to'
+E, [2014-02-09T18:20:44.470286 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:141:in `verify'
+E, [2014-02-09T18:20:44.470369 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:170:in `block in test'
+E, [2014-02-09T18:20:44.470452 #2838] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T18:20:44.470534 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:166:in `test'
+E, [2014-02-09T18:20:44.470617 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:314:in `public_send'
+E, [2014-02-09T18:20:44.470698 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:314:in `block in run_serial'
+E, [2014-02-09T18:20:44.470779 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:314:in `map'
+E, [2014-02-09T18:20:44.470862 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:314:in `run_serial'
+E, [2014-02-09T18:20:44.470943 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:146:in `block in test'
+E, [2014-02-09T18:20:44.471026 #2838] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T18:20:44.471107 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:137:in `test'
+E, [2014-02-09T18:20:44.471189 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T18:20:44.471272 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T18:20:44.471354 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:288:in `invoke_task'
+E, [2014-02-09T18:20:44.471436 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T18:20:44.471519 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T18:20:44.471602 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T18:20:44.471713 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T18:20:44.471813 #2838] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T18:20:44.471901 #2838] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T18:20:44.471984 #2838] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T18:20:44.472066 #2838] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T18:21:01.105563 #4505]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+I, [2014-02-09T18:21:01.200821 #4505]  INFO -- Kitchen: -----> Cleaning up any prior instances of <default-ubuntu>
+I, [2014-02-09T18:21:01.203167 #4505]  INFO -- Kitchen: -----> Destroying <default-ubuntu>...
+I, [2014-02-09T18:21:01.207992 #4505]  INFO -- Kitchen: -----> Testing <default-ubuntu>
+I, [2014-02-09T18:21:01.208430 #4505]  INFO -- Kitchen: -----> Creating <default-ubuntu>...
+E, [2014-02-09T18:27:08.536414 #4505] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T18:27:08.536540 #4505] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2014-02-09T18:27:08.536630 #4505] ERROR -- Kitchen: Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of docker -H tcp://127.0.0.1:4243 build - ----
+STDOUT: Step 1 : FROM stackbrew/ubuntu:saucy
+Pulling repository stackbrew/ubuntu
+STDERR: Uploading context 2.048 kB
+Uploading context 
+2014/02/09 18:27:08 Could not find repository on any of the indexed registries.
+---- End output of docker -H tcp://127.0.0.1:4243 build - ----
+Ran docker -H tcp://127.0.0.1:4243 build - returned 1]
+E, [2014-02-09T18:27:08.536717 #4505] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T18:27:08.536803 #4505] ERROR -- Kitchen: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2014-02-09T18:27:08.536887 #4505] ERROR -- Kitchen: Message: Expected process to exit with [0], but received '1'
+---- Begin output of docker -H tcp://127.0.0.1:4243 build - ----
+STDOUT: Step 1 : FROM stackbrew/ubuntu:saucy
+Pulling repository stackbrew/ubuntu
+STDERR: Uploading context 2.048 kB
+Uploading context 
+2014/02/09 18:27:08 Could not find repository on any of the indexed registries.
+---- End output of docker -H tcp://127.0.0.1:4243 build - ----
+Ran docker -H tcp://127.0.0.1:4243 build - returned 1
+E, [2014-02-09T18:27:08.536973 #4505] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T18:27:08.537061 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/shell_out.rb:70:in `rescue in run_command'
+E, [2014-02-09T18:27:08.537147 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/shell_out.rb:59:in `run_command'
+E, [2014-02-09T18:27:08.537231 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver/base.rb:158:in `run_command'
+E, [2014-02-09T18:27:08.537314 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/kitchen-docker-0.13.0/lib/kitchen/driver/docker.rb:92:in `docker_command'
+E, [2014-02-09T18:27:08.537400 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/kitchen-docker-0.13.0/lib/kitchen/driver/docker.rb:143:in `build_image'
+E, [2014-02-09T18:27:08.537484 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/kitchen-docker-0.13.0/lib/kitchen/driver/docker.rb:65:in `create'
+E, [2014-02-09T18:27:08.537568 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:273:in `public_send'
+E, [2014-02-09T18:27:08.537653 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:273:in `block in perform_action'
+E, [2014-02-09T18:27:08.537738 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:308:in `call'
+E, [2014-02-09T18:27:08.537822 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:308:in `synchronize_or_call'
+E, [2014-02-09T18:27:08.537906 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:283:in `block in action'
+E, [2014-02-09T18:27:08.538006 #4505] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T18:27:08.538091 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:282:in `action'
+E, [2014-02-09T18:27:08.538175 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:273:in `perform_action'
+E, [2014-02-09T18:27:08.538258 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:252:in `create_action'
+E, [2014-02-09T18:27:08.538341 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:246:in `block in transition_to'
+E, [2014-02-09T18:27:08.538425 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:245:in `each'
+E, [2014-02-09T18:27:08.538507 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:245:in `transition_to'
+E, [2014-02-09T18:27:08.538590 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:141:in `verify'
+E, [2014-02-09T18:27:08.538673 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:170:in `block in test'
+E, [2014-02-09T18:27:08.538755 #4505] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T18:27:08.538838 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:166:in `test'
+E, [2014-02-09T18:27:08.538922 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:314:in `public_send'
+E, [2014-02-09T18:27:08.539005 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:314:in `block in run_serial'
+E, [2014-02-09T18:27:08.539088 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:314:in `map'
+E, [2014-02-09T18:27:08.539172 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:314:in `run_serial'
+E, [2014-02-09T18:27:08.539255 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:146:in `block in test'
+E, [2014-02-09T18:27:08.539338 #4505] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T18:27:08.539419 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:137:in `test'
+E, [2014-02-09T18:27:08.539501 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T18:27:08.539584 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T18:27:08.539711 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:288:in `invoke_task'
+E, [2014-02-09T18:27:08.539800 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T18:27:08.539882 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T18:27:08.539965 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T18:27:08.540049 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T18:27:08.540132 #4505] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T18:27:08.540215 #4505] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T18:27:08.540297 #4505] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T18:27:08.540379 #4505] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T18:29:04.541297 #4641]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+I, [2014-02-09T18:29:04.642412 #4641]  INFO -- Kitchen: -----> Cleaning up any prior instances of <default-ubuntu>
+I, [2014-02-09T18:29:04.644855 #4641]  INFO -- Kitchen: -----> Destroying <default-ubuntu>...
+I, [2014-02-09T18:29:04.650039 #4641]  INFO -- Kitchen: -----> Testing <default-ubuntu>
+I, [2014-02-09T18:29:04.650463 #4641]  INFO -- Kitchen: -----> Creating <default-ubuntu>...
+E, [2014-02-09T18:38:21.949275 #4641] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T18:38:21.949620 #4641] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2014-02-09T18:38:21.949786 #4641] ERROR -- Kitchen: Message: Failed to complete #create action: [exit]
+E, [2014-02-09T18:38:21.949929 #4641] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T18:38:21.950082 #4641] ERROR -- Kitchen: Class: SystemExit
+E, [2014-02-09T18:38:21.950197 #4641] ERROR -- Kitchen: Message: exit
+E, [2014-02-09T18:38:21.950283 #4641] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T18:38:21.950367 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:6:in `exit'
+E, [2014-02-09T18:38:21.950451 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:6:in `block in <top (required)>'
+E, [2014-02-09T18:38:21.950535 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/mixlib-shellout-1.3.0/lib/mixlib/shellout/unix.rb:233:in `call'
+E, [2014-02-09T18:38:21.950622 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/mixlib-shellout-1.3.0/lib/mixlib/shellout/unix.rb:233:in `select'
+E, [2014-02-09T18:38:21.950707 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/mixlib-shellout-1.3.0/lib/mixlib/shellout/unix.rb:233:in `attempt_buffer_read'
+E, [2014-02-09T18:38:21.950791 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/mixlib-shellout-1.3.0/lib/mixlib/shellout/unix.rb:61:in `run_command'
+E, [2014-02-09T18:38:21.950875 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/mixlib-shellout-1.3.0/lib/mixlib/shellout.rb:227:in `run_command'
+E, [2014-02-09T18:38:21.950959 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/shell_out.rb:65:in `run_command'
+E, [2014-02-09T18:38:21.951043 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver/base.rb:158:in `run_command'
+E, [2014-02-09T18:38:21.951126 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/kitchen-docker-0.13.0/lib/kitchen/driver/docker.rb:92:in `docker_command'
+E, [2014-02-09T18:38:21.951210 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/kitchen-docker-0.13.0/lib/kitchen/driver/docker.rb:143:in `build_image'
+E, [2014-02-09T18:38:21.951293 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/kitchen-docker-0.13.0/lib/kitchen/driver/docker.rb:65:in `create'
+E, [2014-02-09T18:38:21.951376 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:273:in `public_send'
+E, [2014-02-09T18:38:21.951458 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:273:in `block in perform_action'
+E, [2014-02-09T18:38:21.951540 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:308:in `call'
+E, [2014-02-09T18:38:21.951640 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:308:in `synchronize_or_call'
+E, [2014-02-09T18:38:21.951734 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:283:in `block in action'
+E, [2014-02-09T18:38:21.951819 #4641] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T18:38:21.951902 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:282:in `action'
+E, [2014-02-09T18:38:21.951986 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:273:in `perform_action'
+E, [2014-02-09T18:38:21.952070 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:252:in `create_action'
+E, [2014-02-09T18:38:21.952153 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:246:in `block in transition_to'
+E, [2014-02-09T18:38:21.952237 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:245:in `each'
+E, [2014-02-09T18:38:21.952340 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:245:in `transition_to'
+E, [2014-02-09T18:38:21.952428 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:141:in `verify'
+E, [2014-02-09T18:38:21.952511 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:170:in `block in test'
+E, [2014-02-09T18:38:21.952601 #4641] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T18:38:21.952738 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/instance.rb:166:in `test'
+E, [2014-02-09T18:38:21.952833 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:314:in `public_send'
+E, [2014-02-09T18:38:21.952918 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:314:in `block in run_serial'
+E, [2014-02-09T18:38:21.953000 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:314:in `map'
+E, [2014-02-09T18:38:21.953082 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:314:in `run_serial'
+E, [2014-02-09T18:38:21.953166 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:146:in `block in test'
+E, [2014-02-09T18:38:21.953249 #4641] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T18:38:21.953330 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:137:in `test'
+E, [2014-02-09T18:38:21.953413 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T18:38:21.953497 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T18:38:21.953580 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:288:in `invoke_task'
+E, [2014-02-09T18:38:21.953663 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T18:38:21.953745 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T18:38:21.953825 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T18:38:21.953907 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T18:38:21.953990 #4641] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T18:38:21.954071 #4641] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T18:38:21.954152 #4641] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T18:38:21.954289 #4641] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T18:47:19.942369 #6962]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+E, [2014-02-09T18:47:19.957569 #6962] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T18:47:19.957744 #6962] ERROR -- Kitchen: Class: Kitchen::ClientError
+E, [2014-02-09T18:47:19.957843 #6962] ERROR -- Kitchen: Message: Could not load the 'ec2' driver from the load path. Please ensure that your driver is installed as a gem or included in your Gemfile if using Bundler.
+E, [2014-02-09T18:47:19.957934 #6962] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T18:47:19.958022 #6962] ERROR -- Kitchen: Class: Gem::LoadError
+E, [2014-02-09T18:47:19.958112 #6962] ERROR -- Kitchen: Message: Unable to activate kitchen-ec2-0.7.0, because test-kitchen-1.1.0 conflicts with test-kitchen (~> 1.0.0.beta.3)
+E, [2014-02-09T18:47:19.958199 #6962] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T18:47:19.958285 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:50:in `rescue in for_plugin'
+E, [2014-02-09T18:47:19.958370 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:40:in `for_plugin'
+E, [2014-02-09T18:47:19.958480 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:124:in `new_driver'
+E, [2014-02-09T18:47:19.958569 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:130:in `new_instance'
+E, [2014-02-09T18:47:19.958653 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:73:in `block in build_instances'
+E, [2014-02-09T18:47:19.958736 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `map'
+E, [2014-02-09T18:47:19.958819 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `with_index'
+E, [2014-02-09T18:47:19.958903 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `build_instances'
+E, [2014-02-09T18:47:19.958987 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:52:in `instances'
+E, [2014-02-09T18:47:19.959070 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:342:in `get_filtered_instances'
+E, [2014-02-09T18:47:19.959154 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:327:in `parse_subcommand'
+E, [2014-02-09T18:47:19.959278 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:141:in `block in test'
+E, [2014-02-09T18:47:19.959374 #6962] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T18:47:19.959458 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:137:in `test'
+E, [2014-02-09T18:47:19.959541 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T18:47:19.959645 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T18:47:19.959739 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:288:in `invoke_task'
+E, [2014-02-09T18:47:19.959823 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T18:47:19.959906 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T18:47:19.959989 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T18:47:19.960071 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T18:47:19.960154 #6962] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T18:47:19.960237 #6962] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T18:47:19.960319 #6962] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T18:47:19.960402 #6962] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T18:48:50.985395 #7015]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+E, [2014-02-09T18:48:50.997957 #7015] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T18:48:50.998161 #7015] ERROR -- Kitchen: Class: Kitchen::ClientError
+E, [2014-02-09T18:48:50.998303 #7015] ERROR -- Kitchen: Message: Could not load the 'ec2' driver from the load path. Please ensure that your driver is installed as a gem or included in your Gemfile if using Bundler.
+E, [2014-02-09T18:48:50.998435 #7015] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T18:48:50.998564 #7015] ERROR -- Kitchen: Class: Gem::LoadError
+E, [2014-02-09T18:48:50.998713 #7015] ERROR -- Kitchen: Message: Unable to activate kitchen-ec2-0.7.0, because test-kitchen-1.1.0 conflicts with test-kitchen (~> 1.0.0.beta.3)
+E, [2014-02-09T18:48:50.998851 #7015] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T18:48:50.998986 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:50:in `rescue in for_plugin'
+E, [2014-02-09T18:48:50.999162 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:40:in `for_plugin'
+E, [2014-02-09T18:48:50.999260 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:124:in `new_driver'
+E, [2014-02-09T18:48:50.999345 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:130:in `new_instance'
+E, [2014-02-09T18:48:50.999427 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:73:in `block in build_instances'
+E, [2014-02-09T18:48:50.999510 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `map'
+E, [2014-02-09T18:48:50.999594 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `with_index'
+E, [2014-02-09T18:48:50.999704 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `build_instances'
+E, [2014-02-09T18:48:50.999790 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:52:in `instances'
+E, [2014-02-09T18:48:50.999873 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:342:in `get_filtered_instances'
+E, [2014-02-09T18:48:50.999956 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:327:in `parse_subcommand'
+E, [2014-02-09T18:48:51.000039 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:141:in `block in test'
+E, [2014-02-09T18:48:51.000122 #7015] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T18:48:51.000206 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:137:in `test'
+E, [2014-02-09T18:48:51.000289 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T18:48:51.000372 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T18:48:51.000454 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:288:in `invoke_task'
+E, [2014-02-09T18:48:51.000536 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T18:48:51.000618 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T18:48:51.000740 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T18:48:51.000882 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T18:48:51.001021 #7015] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T18:48:51.001151 #7015] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T18:48:51.001275 #7015] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T18:48:51.001397 #7015] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T18:49:34.702569 #7070]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+E, [2014-02-09T18:49:34.714681 #7070] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T18:49:34.714839 #7070] ERROR -- Kitchen: Class: Kitchen::ClientError
+E, [2014-02-09T18:49:34.714933 #7070] ERROR -- Kitchen: Message: Could not load the 'ec2' driver from the load path. Please ensure that your driver is installed as a gem or included in your Gemfile if using Bundler.
+E, [2014-02-09T18:49:34.715019 #7070] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T18:49:34.715101 #7070] ERROR -- Kitchen: Class: Gem::LoadError
+E, [2014-02-09T18:49:34.715185 #7070] ERROR -- Kitchen: Message: Unable to activate kitchen-ec2-0.7.0, because test-kitchen-1.1.0 conflicts with test-kitchen (~> 1.0.0.beta.3)
+E, [2014-02-09T18:49:34.715268 #7070] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T18:49:34.715350 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:50:in `rescue in for_plugin'
+E, [2014-02-09T18:49:34.715466 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:40:in `for_plugin'
+E, [2014-02-09T18:49:34.715554 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:124:in `new_driver'
+E, [2014-02-09T18:49:34.715664 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:130:in `new_instance'
+E, [2014-02-09T18:49:34.715770 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:73:in `block in build_instances'
+E, [2014-02-09T18:49:34.715852 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `map'
+E, [2014-02-09T18:49:34.715933 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `with_index'
+E, [2014-02-09T18:49:34.716016 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `build_instances'
+E, [2014-02-09T18:49:34.716097 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:52:in `instances'
+E, [2014-02-09T18:49:34.716179 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:342:in `get_filtered_instances'
+E, [2014-02-09T18:49:34.716260 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:327:in `parse_subcommand'
+E, [2014-02-09T18:49:34.716342 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:141:in `block in test'
+E, [2014-02-09T18:49:34.716424 #7070] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T18:49:34.716504 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:137:in `test'
+E, [2014-02-09T18:49:34.716585 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T18:49:34.716666 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T18:49:34.716747 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:288:in `invoke_task'
+E, [2014-02-09T18:49:34.716828 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T18:49:34.716909 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T18:49:34.716991 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T18:49:34.717071 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T18:49:34.717153 #7070] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T18:49:34.717235 #7070] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T18:49:34.717335 #7070] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T18:49:34.717476 #7070] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T18:52:25.421520 #7169]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+E, [2014-02-09T18:52:25.434231 #7169] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T18:52:25.434398 #7169] ERROR -- Kitchen: Class: Kitchen::ClientError
+E, [2014-02-09T18:52:25.434496 #7169] ERROR -- Kitchen: Message: Could not load the 'ec2' driver from the load path. Please ensure that your driver is installed as a gem or included in your Gemfile if using Bundler.
+E, [2014-02-09T18:52:25.434584 #7169] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T18:52:25.434669 #7169] ERROR -- Kitchen: Class: Gem::LoadError
+E, [2014-02-09T18:52:25.434753 #7169] ERROR -- Kitchen: Message: Unable to activate kitchen-ec2-0.7.0, because test-kitchen-1.1.0 conflicts with test-kitchen (~> 1.0.0.beta.3)
+E, [2014-02-09T18:52:25.434911 #7169] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T18:52:25.435033 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:50:in `rescue in for_plugin'
+E, [2014-02-09T18:52:25.435121 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:40:in `for_plugin'
+E, [2014-02-09T18:52:25.435203 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:124:in `new_driver'
+E, [2014-02-09T18:52:25.435285 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:130:in `new_instance'
+E, [2014-02-09T18:52:25.435368 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:73:in `block in build_instances'
+E, [2014-02-09T18:52:25.435450 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `map'
+E, [2014-02-09T18:52:25.435532 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `with_index'
+E, [2014-02-09T18:52:25.435614 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `build_instances'
+E, [2014-02-09T18:52:25.435812 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:52:in `instances'
+E, [2014-02-09T18:52:25.435905 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:342:in `get_filtered_instances'
+E, [2014-02-09T18:52:25.435988 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:327:in `parse_subcommand'
+E, [2014-02-09T18:52:25.436072 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:141:in `block in test'
+E, [2014-02-09T18:52:25.436155 #7169] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T18:52:25.436236 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:137:in `test'
+E, [2014-02-09T18:52:25.436319 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T18:52:25.436401 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T18:52:25.436483 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:288:in `invoke_task'
+E, [2014-02-09T18:52:25.436565 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T18:52:25.436645 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T18:52:25.436726 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T18:52:25.436808 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T18:52:25.436889 #7169] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T18:52:25.436971 #7169] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T18:52:25.437052 #7169] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T18:52:25.437132 #7169] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T18:53:55.619066 #7218]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+E, [2014-02-09T18:53:55.632015 #7218] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T18:53:55.632177 #7218] ERROR -- Kitchen: Class: Kitchen::ClientError
+E, [2014-02-09T18:53:55.632275 #7218] ERROR -- Kitchen: Message: Could not load the 'ec2' driver from the load path. Please ensure that your driver is installed as a gem or included in your Gemfile if using Bundler.
+E, [2014-02-09T18:53:55.632365 #7218] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T18:53:55.632451 #7218] ERROR -- Kitchen: Class: Gem::LoadError
+E, [2014-02-09T18:53:55.632534 #7218] ERROR -- Kitchen: Message: Unable to activate kitchen-ec2-0.7.0, because test-kitchen-1.1.0 conflicts with test-kitchen (~> 1.0.0.beta.3)
+E, [2014-02-09T18:53:55.632650 #7218] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T18:53:55.632738 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:50:in `rescue in for_plugin'
+E, [2014-02-09T18:53:55.632823 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:40:in `for_plugin'
+E, [2014-02-09T18:53:55.632907 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:124:in `new_driver'
+E, [2014-02-09T18:53:55.632991 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:130:in `new_instance'
+E, [2014-02-09T18:53:55.633074 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:73:in `block in build_instances'
+E, [2014-02-09T18:53:55.633156 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `map'
+E, [2014-02-09T18:53:55.633240 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `with_index'
+E, [2014-02-09T18:53:55.633322 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `build_instances'
+E, [2014-02-09T18:53:55.633406 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:52:in `instances'
+E, [2014-02-09T18:53:55.633490 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:342:in `get_filtered_instances'
+E, [2014-02-09T18:53:55.633573 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:327:in `parse_subcommand'
+E, [2014-02-09T18:53:55.633656 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:141:in `block in test'
+E, [2014-02-09T18:53:55.633745 #7218] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T18:53:55.633896 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:137:in `test'
+E, [2014-02-09T18:53:55.634018 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T18:53:55.634127 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T18:53:55.634268 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:288:in `invoke_task'
+E, [2014-02-09T18:53:55.634375 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T18:53:55.634516 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T18:53:55.634657 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T18:53:55.634809 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T18:53:55.634952 #7218] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T18:53:55.635098 #7218] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T18:53:55.635213 #7218] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T18:53:55.635298 #7218] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T18:55:42.705628 #7269]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+E, [2014-02-09T18:55:42.720115 #7269] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T18:55:42.720287 #7269] ERROR -- Kitchen: Class: Kitchen::ClientError
+E, [2014-02-09T18:55:42.720389 #7269] ERROR -- Kitchen: Message: Could not load the 'ec2' driver from the load path. Please ensure that your driver is installed as a gem or included in your Gemfile if using Bundler.
+E, [2014-02-09T18:55:42.720480 #7269] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T18:55:42.720567 #7269] ERROR -- Kitchen: Class: Gem::LoadError
+E, [2014-02-09T18:55:42.720684 #7269] ERROR -- Kitchen: Message: Unable to activate kitchen-ec2-0.7.0, because test-kitchen-1.1.0 conflicts with test-kitchen (~> 1.0.0.beta.3)
+E, [2014-02-09T18:55:42.720775 #7269] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T18:55:42.720859 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:50:in `rescue in for_plugin'
+E, [2014-02-09T18:55:42.720943 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:40:in `for_plugin'
+E, [2014-02-09T18:55:42.721026 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:124:in `new_driver'
+E, [2014-02-09T18:55:42.721110 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:130:in `new_instance'
+E, [2014-02-09T18:55:42.721192 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:73:in `block in build_instances'
+E, [2014-02-09T18:55:42.721275 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `map'
+E, [2014-02-09T18:55:42.721359 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `with_index'
+E, [2014-02-09T18:55:42.721442 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `build_instances'
+E, [2014-02-09T18:55:42.721525 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:52:in `instances'
+E, [2014-02-09T18:55:42.721608 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:342:in `get_filtered_instances'
+E, [2014-02-09T18:55:42.721691 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:327:in `parse_subcommand'
+E, [2014-02-09T18:55:42.721774 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:141:in `block in test'
+E, [2014-02-09T18:55:42.721857 #7269] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T18:55:42.721940 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:137:in `test'
+E, [2014-02-09T18:55:42.722023 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T18:55:42.722106 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T18:55:42.722189 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:288:in `invoke_task'
+E, [2014-02-09T18:55:42.722273 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T18:55:42.722356 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T18:55:42.722439 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T18:55:42.722523 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T18:55:42.722608 #7269] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T18:55:42.722692 #7269] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T18:55:42.722775 #7269] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T18:55:42.722858 #7269] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T18:58:19.875904 #7363]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+E, [2014-02-09T18:58:19.900231 #7363] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T18:58:19.900454 #7363] ERROR -- Kitchen: Class: Kitchen::ClientError
+E, [2014-02-09T18:58:19.900605 #7363] ERROR -- Kitchen: Message: Could not load the 'ec2' driver from the load path. Please ensure that your driver is installed as a gem or included in your Gemfile if using Bundler.
+E, [2014-02-09T18:58:19.900739 #7363] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T18:58:19.900898 #7363] ERROR -- Kitchen: Class: Gem::LoadError
+E, [2014-02-09T18:58:19.901026 #7363] ERROR -- Kitchen: Message: Unable to activate kitchen-ec2-0.7.0, because test-kitchen-1.1.0 conflicts with test-kitchen (~> 1.0.0.beta.3)
+E, [2014-02-09T18:58:19.901152 #7363] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T18:58:19.901277 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:50:in `rescue in for_plugin'
+E, [2014-02-09T18:58:19.901400 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:40:in `for_plugin'
+E, [2014-02-09T18:58:19.901525 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:124:in `new_driver'
+E, [2014-02-09T18:58:19.901651 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:130:in `new_instance'
+E, [2014-02-09T18:58:19.901772 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:73:in `block in build_instances'
+E, [2014-02-09T18:58:19.901895 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `map'
+E, [2014-02-09T18:58:19.902019 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `with_index'
+E, [2014-02-09T18:58:19.902145 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `build_instances'
+E, [2014-02-09T18:58:19.902285 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:52:in `instances'
+E, [2014-02-09T18:58:19.902414 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:342:in `get_filtered_instances'
+E, [2014-02-09T18:58:19.902539 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:327:in `parse_subcommand'
+E, [2014-02-09T18:58:19.902660 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:307:in `block in exec_action'
+E, [2014-02-09T18:58:19.902789 #7363] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T18:58:19.902912 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:305:in `exec_action'
+E, [2014-02-09T18:58:19.903031 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:108:in `block (2 levels) in <class:CLI>'
+E, [2014-02-09T18:58:19.903155 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T18:58:19.903280 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T18:58:19.903403 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:288:in `invoke_task'
+E, [2014-02-09T18:58:19.903527 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T18:58:19.903698 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T18:58:19.903835 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T18:58:19.903961 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T18:58:19.904085 #7363] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T18:58:19.904206 #7363] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T18:58:19.904342 #7363] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T18:58:19.904473 #7363] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T19:00:37.198799 #7412]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+E, [2014-02-09T19:00:37.211533 #7412] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T19:00:37.211786 #7412] ERROR -- Kitchen: Class: Kitchen::ClientError
+E, [2014-02-09T19:00:37.211982 #7412] ERROR -- Kitchen: Message: Could not load the 'ec2' driver from the load path. Please ensure that your driver is installed as a gem or included in your Gemfile if using Bundler.
+E, [2014-02-09T19:00:37.212139 #7412] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T19:00:37.212283 #7412] ERROR -- Kitchen: Class: Gem::LoadError
+E, [2014-02-09T19:00:37.212438 #7412] ERROR -- Kitchen: Message: Unable to activate kitchen-ec2-0.7.0, because test-kitchen-1.1.0 conflicts with test-kitchen (~> 1.0.0.beta.3)
+E, [2014-02-09T19:00:37.212540 #7412] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T19:00:37.212627 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:50:in `rescue in for_plugin'
+E, [2014-02-09T19:00:37.212711 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:40:in `for_plugin'
+E, [2014-02-09T19:00:37.212795 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:124:in `new_driver'
+E, [2014-02-09T19:00:37.212880 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:130:in `new_instance'
+E, [2014-02-09T19:00:37.212964 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:73:in `block in build_instances'
+E, [2014-02-09T19:00:37.213047 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `map'
+E, [2014-02-09T19:00:37.213130 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `with_index'
+E, [2014-02-09T19:00:37.213213 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `build_instances'
+E, [2014-02-09T19:00:37.213295 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:52:in `instances'
+E, [2014-02-09T19:00:37.213379 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:342:in `get_filtered_instances'
+E, [2014-02-09T19:00:37.213461 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:327:in `parse_subcommand'
+E, [2014-02-09T19:00:37.213544 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:141:in `block in test'
+E, [2014-02-09T19:00:37.213627 #7412] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T19:00:37.213708 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:137:in `test'
+E, [2014-02-09T19:00:37.213789 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T19:00:37.213871 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T19:00:37.213953 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:288:in `invoke_task'
+E, [2014-02-09T19:00:37.214035 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T19:00:37.214117 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T19:00:37.214200 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T19:00:37.214283 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T19:00:37.214364 #7412] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T19:00:37.214446 #7412] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T19:00:37.214528 #7412] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T19:00:37.214608 #7412] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T19:03:54.858244 #7525]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+E, [2014-02-09T19:03:54.870435 #7525] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T19:03:54.870598 #7525] ERROR -- Kitchen: Class: Kitchen::ClientError
+E, [2014-02-09T19:03:54.870693 #7525] ERROR -- Kitchen: Message: Could not load the 'ec2' driver from the load path. Please ensure that your driver is installed as a gem or included in your Gemfile if using Bundler.
+E, [2014-02-09T19:03:54.870782 #7525] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T19:03:54.870867 #7525] ERROR -- Kitchen: Class: Gem::LoadError
+E, [2014-02-09T19:03:54.870950 #7525] ERROR -- Kitchen: Message: Unable to activate kitchen-ec2-0.7.0, because test-kitchen-1.1.0 conflicts with test-kitchen (~> 1.0.0.beta.3)
+E, [2014-02-09T19:03:54.871034 #7525] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T19:03:54.871116 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:50:in `rescue in for_plugin'
+E, [2014-02-09T19:03:54.871201 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:40:in `for_plugin'
+E, [2014-02-09T19:03:54.871285 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:124:in `new_driver'
+E, [2014-02-09T19:03:54.871369 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:130:in `new_instance'
+E, [2014-02-09T19:03:54.871453 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:73:in `block in build_instances'
+E, [2014-02-09T19:03:54.871537 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `map'
+E, [2014-02-09T19:03:54.871662 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `with_index'
+E, [2014-02-09T19:03:54.871762 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `build_instances'
+E, [2014-02-09T19:03:54.871849 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:52:in `instances'
+E, [2014-02-09T19:03:54.871933 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:342:in `get_filtered_instances'
+E, [2014-02-09T19:03:54.872017 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:327:in `parse_subcommand'
+E, [2014-02-09T19:03:54.872102 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:141:in `block in test'
+E, [2014-02-09T19:03:54.872187 #7525] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T19:03:54.872271 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:137:in `test'
+E, [2014-02-09T19:03:54.872355 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T19:03:54.872439 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T19:03:54.872523 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:288:in `invoke_task'
+E, [2014-02-09T19:03:54.872605 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T19:03:54.872688 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T19:03:54.872772 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T19:03:54.872856 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T19:03:54.872939 #7525] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T19:03:54.873023 #7525] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T19:03:54.873107 #7525] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T19:03:54.873190 #7525] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T19:05:07.834275 #7597]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+E, [2014-02-09T19:05:07.847042 #7597] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T19:05:07.847208 #7597] ERROR -- Kitchen: Class: Kitchen::ClientError
+E, [2014-02-09T19:05:07.847306 #7597] ERROR -- Kitchen: Message: Could not load the 'ec2' driver from the load path. Please ensure that your driver is installed as a gem or included in your Gemfile if using Bundler.
+E, [2014-02-09T19:05:07.847396 #7597] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T19:05:07.847478 #7597] ERROR -- Kitchen: Class: Gem::LoadError
+E, [2014-02-09T19:05:07.847577 #7597] ERROR -- Kitchen: Message: Unable to activate kitchen-ec2-0.7.0, because test-kitchen-1.1.0 conflicts with test-kitchen (~> 1.0.0.beta.3)
+E, [2014-02-09T19:05:07.847758 #7597] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T19:05:07.847859 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:50:in `rescue in for_plugin'
+E, [2014-02-09T19:05:07.847946 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:40:in `for_plugin'
+E, [2014-02-09T19:05:07.848030 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:124:in `new_driver'
+E, [2014-02-09T19:05:07.848112 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:130:in `new_instance'
+E, [2014-02-09T19:05:07.848195 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:73:in `block in build_instances'
+E, [2014-02-09T19:05:07.848277 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `map'
+E, [2014-02-09T19:05:07.848360 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `with_index'
+E, [2014-02-09T19:05:07.848443 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `build_instances'
+E, [2014-02-09T19:05:07.848527 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:52:in `instances'
+E, [2014-02-09T19:05:07.848611 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:342:in `get_filtered_instances'
+E, [2014-02-09T19:05:07.848695 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:327:in `parse_subcommand'
+E, [2014-02-09T19:05:07.848778 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:141:in `block in test'
+E, [2014-02-09T19:05:07.848860 #7597] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T19:05:07.848944 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:137:in `test'
+E, [2014-02-09T19:05:07.849027 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T19:05:07.849110 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T19:05:07.849192 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:288:in `invoke_task'
+E, [2014-02-09T19:05:07.849274 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T19:05:07.849355 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T19:05:07.849442 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T19:05:07.849525 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T19:05:07.849607 #7597] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T19:05:07.849690 #7597] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T19:05:07.849772 #7597] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T19:05:07.849888 #7597] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T19:05:49.838643 #7624]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+E, [2014-02-09T19:05:49.857455 #7624] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T19:05:49.857655 #7624] ERROR -- Kitchen: Class: Kitchen::ClientError
+E, [2014-02-09T19:05:49.857771 #7624] ERROR -- Kitchen: Message: Could not load the 'ec2' driver from the load path. Please ensure that your driver is installed as a gem or included in your Gemfile if using Bundler.
+E, [2014-02-09T19:05:49.857871 #7624] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T19:05:49.857963 #7624] ERROR -- Kitchen: Class: Gem::LoadError
+E, [2014-02-09T19:05:49.858050 #7624] ERROR -- Kitchen: Message: Unable to activate kitchen-ec2-0.7.0, because test-kitchen-1.1.0 conflicts with test-kitchen (~> 1.0.0.beta.3)
+E, [2014-02-09T19:05:49.858138 #7624] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T19:05:49.858224 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:50:in `rescue in for_plugin'
+E, [2014-02-09T19:05:49.858311 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:40:in `for_plugin'
+E, [2014-02-09T19:05:49.858398 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:124:in `new_driver'
+E, [2014-02-09T19:05:49.858483 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:130:in `new_instance'
+E, [2014-02-09T19:05:49.858608 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:73:in `block in build_instances'
+E, [2014-02-09T19:05:49.858749 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `map'
+E, [2014-02-09T19:05:49.858843 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `with_index'
+E, [2014-02-09T19:05:49.858927 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `build_instances'
+E, [2014-02-09T19:05:49.859012 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:52:in `instances'
+E, [2014-02-09T19:05:49.859097 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:342:in `get_filtered_instances'
+E, [2014-02-09T19:05:49.859181 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:327:in `parse_subcommand'
+E, [2014-02-09T19:05:49.859265 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:141:in `block in test'
+E, [2014-02-09T19:05:49.859349 #7624] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T19:05:49.859433 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:137:in `test'
+E, [2014-02-09T19:05:49.859517 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T19:05:49.859601 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T19:05:49.859715 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:288:in `invoke_task'
+E, [2014-02-09T19:05:49.859801 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T19:05:49.859885 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T19:05:49.859968 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T19:05:49.860050 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T19:05:49.860133 #7624] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T19:05:49.860218 #7624] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T19:05:49.860363 #7624] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T19:05:49.860454 #7624] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T19:09:31.310630 #7818]  INFO -- Kitchen: -----> Starting Kitchen (v1.1.0)
+E, [2014-02-09T19:09:31.323866 #7818] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T19:09:31.324089 #7818] ERROR -- Kitchen: Class: Kitchen::ClientError
+E, [2014-02-09T19:09:31.324249 #7818] ERROR -- Kitchen: Message: Could not load the 'ec2' driver from the load path. Please ensure that your driver is installed as a gem or included in your Gemfile if using Bundler.
+E, [2014-02-09T19:09:31.324401 #7818] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T19:09:31.324547 #7818] ERROR -- Kitchen: Class: Gem::LoadError
+E, [2014-02-09T19:09:31.324696 #7818] ERROR -- Kitchen: Message: Unable to activate kitchen-ec2-0.7.0, because test-kitchen-1.1.0 conflicts with test-kitchen (~> 1.0.0.beta.3)
+E, [2014-02-09T19:09:31.324843 #7818] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T19:09:31.324941 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:50:in `rescue in for_plugin'
+E, [2014-02-09T19:09:31.325027 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/driver.rb:40:in `for_plugin'
+E, [2014-02-09T19:09:31.325114 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:124:in `new_driver'
+E, [2014-02-09T19:09:31.325198 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:130:in `new_instance'
+E, [2014-02-09T19:09:31.325282 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:73:in `block in build_instances'
+E, [2014-02-09T19:09:31.325366 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `map'
+E, [2014-02-09T19:09:31.325450 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `with_index'
+E, [2014-02-09T19:09:31.325534 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:72:in `build_instances'
+E, [2014-02-09T19:09:31.325618 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/config.rb:52:in `instances'
+E, [2014-02-09T19:09:31.325703 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:342:in `get_filtered_instances'
+E, [2014-02-09T19:09:31.325788 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:327:in `parse_subcommand'
+E, [2014-02-09T19:09:31.325873 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:307:in `block in exec_action'
+E, [2014-02-09T19:09:31.325956 #7818] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T19:09:31.326040 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:305:in `exec_action'
+E, [2014-02-09T19:09:31.326125 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:108:in `block (2 levels) in <class:CLI>'
+E, [2014-02-09T19:09:31.326208 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T19:09:31.326292 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T19:09:31.326375 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/cli.rb:288:in `invoke_task'
+E, [2014-02-09T19:09:31.326458 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T19:09:31.326541 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T19:09:31.326625 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T19:09:31.326708 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T19:09:31.326822 #7818] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.1.0/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T19:09:31.326909 #7818] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T19:09:31.326991 #7818] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T19:09:31.327072 #7818] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T19:10:53.978335 #7879]  INFO -- Kitchen: -----> Starting Kitchen (v1.0.0.beta.3)
+I, [2014-02-09T19:10:56.369715 #7879]  INFO -- Kitchen: -----> Cleaning up any prior instances of <default-ubuntu-1304>
+I, [2014-02-09T19:10:56.370561 #7879]  INFO -- Kitchen: -----> Destroying <default-ubuntu-1304>
+I, [2014-02-09T19:10:56.375569 #7879]  INFO -- Kitchen: -----> Testing <default-ubuntu-1304>
+I, [2014-02-09T19:10:56.376171 #7879]  INFO -- Kitchen: -----> Creating <default-ubuntu-1304>
+E, [2014-02-09T19:10:57.696015 #7879] ERROR -- Kitchen: Create failed on instance <default-ubuntu-1304>.
+I, [2014-02-09T19:11:20.092312 #7905]  INFO -- Kitchen: -----> Starting Kitchen (v1.0.0.beta.3)
+I, [2014-02-09T19:11:22.402708 #7905]  INFO -- Kitchen: -----> Cleaning up any prior instances of <default-ubuntu-1304>
+I, [2014-02-09T19:11:22.405315 #7905]  INFO -- Kitchen: -----> Destroying <default-ubuntu-1304>
+I, [2014-02-09T19:11:22.410839 #7905]  INFO -- Kitchen: -----> Testing <default-ubuntu-1304>
+I, [2014-02-09T19:11:22.411315 #7905]  INFO -- Kitchen: -----> Creating <default-ubuntu-1304>
+E, [2014-02-09T19:21:43.957247 #7905] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T19:21:43.957454 #7905] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2014-02-09T19:21:43.957586 #7905] ERROR -- Kitchen: Message: Failed to complete #create action: [exit]
+E, [2014-02-09T19:21:43.957700 #7905] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T19:21:43.957844 #7905] ERROR -- Kitchen: Class: SystemExit
+E, [2014-02-09T19:21:43.957936 #7905] ERROR -- Kitchen: Message: exit
+E, [2014-02-09T19:21:43.958052 #7905] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T19:21:43.958139 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/bin/kitchen:6:in `exit'
+E, [2014-02-09T19:21:43.958224 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/bin/kitchen:6:in `block in <top (required)>'
+E, [2014-02-09T19:21:43.958306 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/ssh.rb:167:in `call'
+E, [2014-02-09T19:21:43.958389 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/ssh.rb:167:in `initialize'
+E, [2014-02-09T19:21:43.958487 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/ssh.rb:167:in `new'
+E, [2014-02-09T19:21:43.958575 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/ssh.rb:167:in `test_ssh'
+E, [2014-02-09T19:21:43.958690 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/ssh.rb:89:in `wait'
+E, [2014-02-09T19:21:43.958774 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/driver/ssh_base.rb:126:in `wait_for_sshd'
+E, [2014-02-09T19:21:43.958857 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/kitchen-ec2-0.7.0/lib/kitchen/driver/ec2.rb:67:in `create'
+E, [2014-02-09T19:21:43.958940 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:263:in `public_send'
+E, [2014-02-09T19:21:43.959066 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:263:in `block in perform_action'
+E, [2014-02-09T19:21:43.959151 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:298:in `call'
+E, [2014-02-09T19:21:43.959234 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:298:in `synchronize_or_call'
+E, [2014-02-09T19:21:43.959341 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:273:in `block in action'
+E, [2014-02-09T19:21:43.959449 #7905] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T19:21:43.959532 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:272:in `action'
+E, [2014-02-09T19:21:43.959614 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:263:in `perform_action'
+E, [2014-02-09T19:21:43.959727 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:242:in `create_action'
+E, [2014-02-09T19:21:43.959826 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:236:in `block in transition_to'
+E, [2014-02-09T19:21:43.959910 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:235:in `each'
+E, [2014-02-09T19:21:43.959991 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:235:in `transition_to'
+E, [2014-02-09T19:21:43.960071 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:124:in `verify'
+E, [2014-02-09T19:21:43.960185 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:153:in `block in test'
+E, [2014-02-09T19:21:43.960270 #7905] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T19:21:43.960352 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:149:in `test'
+E, [2014-02-09T19:21:43.960458 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/cli.rb:282:in `public_send'
+E, [2014-02-09T19:21:43.960540 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/cli.rb:282:in `block in run_serial'
+E, [2014-02-09T19:21:43.960622 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/cli.rb:282:in `map'
+E, [2014-02-09T19:21:43.960722 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/cli.rb:282:in `run_serial'
+E, [2014-02-09T19:21:43.960804 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/cli.rb:114:in `block in test'
+E, [2014-02-09T19:21:43.960885 #7905] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T19:21:43.960985 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/cli.rb:105:in `test'
+E, [2014-02-09T19:21:43.961069 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T19:21:43.961151 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T19:21:43.961232 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/cli.rb:256:in `invoke_task'
+E, [2014-02-09T19:21:43.961326 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T19:21:43.961407 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T19:21:43.961501 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T19:21:43.961584 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T19:21:43.961665 #7905] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T19:21:43.961745 #7905] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T19:21:43.961841 #7905] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T19:21:43.961922 #7905] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T19:22:14.447520 #8190]  INFO -- Kitchen: -----> Starting Kitchen (v1.0.0.beta.3)
+I, [2014-02-09T19:22:16.681101 #8190]  INFO -- Kitchen: -----> Destroying <default-ubuntu-1304>
+I, [2014-02-09T19:22:18.012203 #8190]  INFO -- Kitchen: -----> Kitchen is finished. (0m3.56s)
+I, [2014-02-09T19:22:23.963059 #8194]  INFO -- Kitchen: -----> Starting Kitchen (v1.0.0.beta.3)
+I, [2014-02-09T19:22:26.222232 #8194]  INFO -- Kitchen: -----> Cleaning up any prior instances of <default-ubuntu-1304>
+I, [2014-02-09T19:22:26.222811 #8194]  INFO -- Kitchen: -----> Destroying <default-ubuntu-1304>
+I, [2014-02-09T19:22:26.226750 #8194]  INFO -- Kitchen: -----> Testing <default-ubuntu-1304>
+I, [2014-02-09T19:22:26.227280 #8194]  INFO -- Kitchen: -----> Creating <default-ubuntu-1304>
+E, [2014-02-09T19:45:12.284279 #8194] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T19:45:12.284411 #8194] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2014-02-09T19:45:12.284503 #8194] ERROR -- Kitchen: Message: Failed to complete #create action: [exit]
+E, [2014-02-09T19:45:12.284587 #8194] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T19:45:12.284673 #8194] ERROR -- Kitchen: Class: SystemExit
+E, [2014-02-09T19:45:12.284842 #8194] ERROR -- Kitchen: Message: exit
+E, [2014-02-09T19:45:12.284944 #8194] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T19:45:12.285028 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/bin/kitchen:6:in `exit'
+E, [2014-02-09T19:45:12.285112 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/bin/kitchen:6:in `block in <top (required)>'
+E, [2014-02-09T19:45:12.285195 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/ssh.rb:167:in `call'
+E, [2014-02-09T19:45:12.285385 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/ssh.rb:167:in `initialize'
+E, [2014-02-09T19:45:12.285481 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/ssh.rb:167:in `new'
+E, [2014-02-09T19:45:12.285565 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/ssh.rb:167:in `test_ssh'
+E, [2014-02-09T19:45:12.285648 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/ssh.rb:89:in `wait'
+E, [2014-02-09T19:45:12.289160 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/driver/ssh_base.rb:126:in `wait_for_sshd'
+E, [2014-02-09T19:45:12.289427 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/kitchen-ec2-0.7.0/lib/kitchen/driver/ec2.rb:67:in `create'
+E, [2014-02-09T19:45:12.289530 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:263:in `public_send'
+E, [2014-02-09T19:45:12.289618 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:263:in `block in perform_action'
+E, [2014-02-09T19:45:12.289703 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:298:in `call'
+E, [2014-02-09T19:45:12.289916 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:298:in `synchronize_or_call'
+E, [2014-02-09T19:45:12.290013 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:273:in `block in action'
+E, [2014-02-09T19:45:12.290098 #8194] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T19:45:12.290181 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:272:in `action'
+E, [2014-02-09T19:45:12.290264 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:263:in `perform_action'
+E, [2014-02-09T19:45:12.290388 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:242:in `create_action'
+E, [2014-02-09T19:45:12.290473 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:236:in `block in transition_to'
+E, [2014-02-09T19:45:12.290584 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:235:in `each'
+E, [2014-02-09T19:45:12.290671 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:235:in `transition_to'
+E, [2014-02-09T19:45:12.290754 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:124:in `verify'
+E, [2014-02-09T19:45:12.290854 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:153:in `block in test'
+E, [2014-02-09T19:45:12.290937 #8194] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T19:45:12.291017 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/instance.rb:149:in `test'
+E, [2014-02-09T19:45:12.291098 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/cli.rb:282:in `public_send'
+E, [2014-02-09T19:45:12.291194 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/cli.rb:282:in `block in run_serial'
+E, [2014-02-09T19:45:12.291318 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/cli.rb:282:in `map'
+E, [2014-02-09T19:45:12.291405 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/cli.rb:282:in `run_serial'
+E, [2014-02-09T19:45:12.291499 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/cli.rb:114:in `block in test'
+E, [2014-02-09T19:45:12.291583 #8194] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T19:45:12.291689 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/cli.rb:105:in `test'
+E, [2014-02-09T19:45:12.291791 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T19:45:12.291873 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T19:45:12.291954 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/cli.rb:256:in `invoke_task'
+E, [2014-02-09T19:45:12.292034 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T19:45:12.292155 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T19:45:12.292238 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T19:45:12.292319 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T19:45:12.292400 #8194] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0.beta.3/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T19:45:12.292481 #8194] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T19:45:12.292583 #8194] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T19:45:12.292665 #8194] ERROR -- Kitchen: ----------------------
+I, [2014-02-09T19:46:02.026146 #8423]  INFO -- Kitchen: -----> Starting Kitchen (v1.0.0.beta.3)
+I, [2014-02-09T19:46:04.263440 #8423]  INFO -- Kitchen: -----> Destroying <default-ubuntu-1304>
+I, [2014-02-09T19:46:05.727221 #8423]  INFO -- Kitchen: -----> Kitchen is finished. (0m3.70s)
+I, [2014-02-09T23:25:06.775672 #11220]  INFO -- Kitchen: -----> Starting Kitchen (v1.0.0)
+I, [2014-02-09T23:25:06.874358 #11220]  INFO -- Kitchen: -----> Creating <default-ubuntu>...
+E, [2014-02-09T23:28:12.160255 #11220] ERROR -- Kitchen: ------Exception-------
+E, [2014-02-09T23:28:12.160437 #11220] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2014-02-09T23:28:12.160535 #11220] ERROR -- Kitchen: Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of docker -H tcp://127.0.0.1:4243 build - ----
+STDOUT: Step 1 : FROM stackbrew/ubuntu:13.04
+Pulling repository stackbrew/ubuntu
+STDERR: Uploading context 2.048 kB
+Uploading context 
+2014/02/09 23:28:12 Could not find repository on any of the indexed registries.
+---- End output of docker -H tcp://127.0.0.1:4243 build - ----
+Ran docker -H tcp://127.0.0.1:4243 build - returned 1]
+E, [2014-02-09T23:28:12.161124 #11220] ERROR -- Kitchen: ---Nested Exception---
+E, [2014-02-09T23:28:12.161289 #11220] ERROR -- Kitchen: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2014-02-09T23:28:12.161387 #11220] ERROR -- Kitchen: Message: Expected process to exit with [0], but received '1'
+---- Begin output of docker -H tcp://127.0.0.1:4243 build - ----
+STDOUT: Step 1 : FROM stackbrew/ubuntu:13.04
+Pulling repository stackbrew/ubuntu
+STDERR: Uploading context 2.048 kB
+Uploading context 
+2014/02/09 23:28:12 Could not find repository on any of the indexed registries.
+---- End output of docker -H tcp://127.0.0.1:4243 build - ----
+Ran docker -H tcp://127.0.0.1:4243 build - returned 1
+E, [2014-02-09T23:28:12.161536 #11220] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-02-09T23:28:12.161654 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/shell_out.rb:70:in `rescue in run_command'
+E, [2014-02-09T23:28:12.161766 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/shell_out.rb:59:in `run_command'
+E, [2014-02-09T23:28:12.161908 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/driver/base.rb:158:in `run_command'
+E, [2014-02-09T23:28:12.162049 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/kitchen-docker-0.13.0/lib/kitchen/driver/docker.rb:92:in `docker_command'
+E, [2014-02-09T23:28:12.162196 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/kitchen-docker-0.13.0/lib/kitchen/driver/docker.rb:143:in `build_image'
+E, [2014-02-09T23:28:12.162348 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/kitchen-docker-0.13.0/lib/kitchen/driver/docker.rb:65:in `create'
+E, [2014-02-09T23:28:12.162487 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/instance.rb:273:in `public_send'
+E, [2014-02-09T23:28:12.162622 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/instance.rb:273:in `block in perform_action'
+E, [2014-02-09T23:28:12.162745 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/instance.rb:308:in `call'
+E, [2014-02-09T23:28:12.162834 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/instance.rb:308:in `synchronize_or_call'
+E, [2014-02-09T23:28:12.162917 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/instance.rb:283:in `block in action'
+E, [2014-02-09T23:28:12.162999 #11220] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T23:28:12.163080 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/instance.rb:282:in `action'
+E, [2014-02-09T23:28:12.163162 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/instance.rb:273:in `perform_action'
+E, [2014-02-09T23:28:12.163279 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/instance.rb:252:in `create_action'
+E, [2014-02-09T23:28:12.163415 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/instance.rb:246:in `block in transition_to'
+E, [2014-02-09T23:28:12.163546 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/instance.rb:245:in `each'
+E, [2014-02-09T23:28:12.163740 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/instance.rb:245:in `transition_to'
+E, [2014-02-09T23:28:12.163878 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/instance.rb:108:in `create'
+E, [2014-02-09T23:28:12.164024 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/cli.rb:314:in `public_send'
+E, [2014-02-09T23:28:12.164127 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/cli.rb:314:in `block in run_serial'
+E, [2014-02-09T23:28:12.164235 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/cli.rb:314:in `map'
+E, [2014-02-09T23:28:12.164324 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/cli.rb:314:in `run_serial'
+E, [2014-02-09T23:28:12.164414 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/cli.rb:308:in `block in exec_action'
+E, [2014-02-09T23:28:12.164499 #11220] ERROR -- Kitchen: /usr/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-02-09T23:28:12.164581 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/cli.rb:305:in `exec_action'
+E, [2014-02-09T23:28:12.164664 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/cli.rb:108:in `block (2 levels) in <class:CLI>'
+E, [2014-02-09T23:28:12.164747 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-02-09T23:28:12.164830 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-02-09T23:28:12.164913 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/cli.rb:288:in `invoke_task'
+E, [2014-02-09T23:28:12.164994 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-02-09T23:28:12.165077 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-02-09T23:28:12.165160 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-02-09T23:28:12.165243 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-02-09T23:28:12.165327 #11220] ERROR -- Kitchen: /var/lib/gems/1.9.1/gems/test-kitchen-1.0.0/bin/kitchen:13:in `<top (required)>'
+E, [2014-02-09T23:28:12.165409 #11220] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `load'
+E, [2014-02-09T23:28:12.165492 #11220] ERROR -- Kitchen: /usr/local/bin/kitchen:23:in `<main>'
+E, [2014-02-09T23:28:12.165573 #11220] ERROR -- Kitchen: ----------------------
+I, [2014-02-10T00:57:43.132542 #32758]  INFO -- Kitchen: -----> Starting Kitchen (v1.0.0)
+I, [2014-02-10T00:57:43.282607 #32758]  INFO -- Kitchen: -----> Cleaning up any prior instances of <default-ubuntu>
+I, [2014-02-10T00:57:43.287418 #32758]  INFO -- Kitchen: -----> Destroying <default-ubuntu>...
+I, [2014-02-10T00:57:43.295350 #32758]  INFO -- Kitchen: -----> Testing <default-ubuntu>
+I, [2014-02-10T00:57:43.295752 #32758]  INFO -- Kitchen: -----> Creating <default-ubuntu>...
+I, [2014-02-10T00:58:12.222924 #32758]  INFO -- Kitchen: -----> Converging <default-ubuntu>...
+E, [2014-02-10T01:04:05.097772 #32758] ERROR -- Kitchen: Converge failed on instance <default-ubuntu>.
+I, [2014-02-10T01:13:47.092869 #9310]  INFO -- Kitchen: -----> Starting Kitchen (v1.0.0)
+I, [2014-02-10T01:13:47.241329 #9310]  INFO -- Kitchen: -----> Converging <default-ubuntu>...
+E, [2014-02-10T01:13:56.441438 #9310] ERROR -- Kitchen: Converge failed on instance <default-ubuntu>.
+I, [2014-02-10T01:17:37.669453 #10253]  INFO -- Kitchen: -----> Starting Kitchen (v1.0.0)
+I, [2014-02-10T01:17:37.806032 #10253]  INFO -- Kitchen: -----> Converging <default-ubuntu>...
+E, [2014-02-10T01:17:43.264175 #10253] ERROR -- Kitchen: Converge failed on instance <default-ubuntu>.
+I, [2014-02-10T01:24:59.903826 #12131]  INFO -- Kitchen: -----> Starting Kitchen (v1.0.0)
+I, [2014-02-10T01:25:00.000392 #12131]  INFO -- Kitchen: -----> Converging <default-ubuntu>...
+E, [2014-02-10T01:25:05.245897 #12131] ERROR -- Kitchen: Converge failed on instance <default-ubuntu>.
+I, [2014-02-10T01:27:17.135437 #12617]  INFO -- Kitchen: -----> Starting Kitchen (v1.0.0)
+I, [2014-02-10T01:27:17.278809 #12617]  INFO -- Kitchen: -----> Converging <default-ubuntu>...
+E, [2014-02-10T01:28:00.699509 #12617] ERROR -- Kitchen: Converge failed on instance <default-ubuntu>.
+I, [2014-02-10T01:29:58.426529 #13559]  INFO -- Kitchen: -----> Starting Kitchen (v1.0.0)
+I, [2014-02-10T01:29:58.574234 #13559]  INFO -- Kitchen: -----> Converging <default-ubuntu>...
+E, [2014-02-10T01:32:11.263066 #13559] ERROR -- Kitchen: Converge failed on instance <default-ubuntu>.
+I, [2014-02-10T01:33:31.078170 #14588]  INFO -- Kitchen: -----> Starting Kitchen (v1.0.0)
+I, [2014-02-10T01:33:31.235078 #14588]  INFO -- Kitchen: -----> Converging <default-ubuntu>...
+E, [2014-02-10T01:33:45.730375 #14588] ERROR -- Kitchen: Converge failed on instance <default-ubuntu>.
+I, [2014-02-10T01:34:31.230358 #14995]  INFO -- Kitchen: -----> Starting Kitchen (v1.0.0)
+I, [2014-02-10T01:34:31.362227 #14995]  INFO -- Kitchen: -----> Destroying <default-ubuntu>...
+I, [2014-02-10T01:34:42.772694 #14995]  INFO -- Kitchen: -----> Kitchen is finished. (0m11.54s)
+I, [2014-02-10T01:35:51.125899 #15283]  INFO -- Kitchen: -----> Starting Kitchen (v1.0.0)
+I, [2014-02-10T01:35:51.247517 #15283]  INFO -- Kitchen: -----> Creating <default-ubuntu>...
+I, [2014-02-10T01:35:52.551940 #15283]  INFO -- Kitchen: -----> Kitchen is finished. (0m1.43s)
+I, [2014-02-10T01:35:59.427496 #15377]  INFO -- Kitchen: -----> Starting Kitchen (v1.0.0)
+I, [2014-02-10T01:35:59.536070 #15377]  INFO -- Kitchen: -----> Converging <default-ubuntu>...
+E, [2014-02-10T01:46:04.535691 #15377] ERROR -- Kitchen: Converge failed on instance <default-ubuntu>.
