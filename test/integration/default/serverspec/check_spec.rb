@@ -33,9 +33,9 @@ describe package('build-essential') do
   it { should be_installed }
 end
 
-describe service('nagios3') do
-  it { should be_enabled }
+describe process('nagios3') do
   it { should be_running }
+  its(:args) { should match /nagios3/ }
 end
 
 describe process('ruby2.0') do

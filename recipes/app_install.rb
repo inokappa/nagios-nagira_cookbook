@@ -20,7 +20,7 @@ gem_package "nagira" do
   only_if {File.exists?("/usr/bin/gem")}
 end
 
-cookbook_file "/tmp/nagira.patch" do
+cookbook_file "/tmp/nagira" do
   source "nagira.patch"
   owner "root"
   group "root"
@@ -32,9 +32,10 @@ bash "nagira.patch" do
   user "root"
   cwd "/tmp"
   code <<-EOH
+    nagira-setup config:config
     cd /etc/init.d/
-    patch -f < /tmp/nagira.patch
+    patch -u nagira < /tmp/nagira
   EOH
-  only_if {File.exists?("/tmp/nagira.patch")}
+  not_if {File.exists?("/usr/local/bin/nagira-setup")}
   notifies :start, resources(:service => "nagira")
 end
