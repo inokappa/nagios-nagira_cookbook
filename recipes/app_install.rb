@@ -5,14 +5,14 @@
   end
 end
 #
-service "nagios" do
-  supports :status => true, :restart => true, :reload => true
+service "nagios3" do
   action :nothing
+  supports :status => true, :restart => true, :reload => true
 end
 #
 service "nagira" do
-  supports :start => true, :status => true, :restart => true
   action :nothing
+  supports :start => true, :status => true, :restart => true
 end
 
 gem_package "nagira" do
@@ -34,8 +34,8 @@ bash "nagira.patch" do
   code <<-EOH
     nagira-setup config:config
     cd /etc/init.d/
-    patch -u nagira < /tmp/nagira
+    patch -u --ignore-whitespace nagira < /tmp/nagira
   EOH
-  not_if {File.exists?("/usr/local/bin/nagira-setup")}
-  notifies :start, resources(:service => "nagira")
+  only_if {File.exists?("/usr/local/bin/nagira-setup")}
+  notifies :start, resources(:service => "nagira"),:immediately
 end

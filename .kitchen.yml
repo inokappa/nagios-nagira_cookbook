@@ -15,3 +15,6 @@ suites:
     "recipe[nagios-nagira_cookbook::app_install]",
 ]
   attributes: {}
+
+busser:
+  sudo: true

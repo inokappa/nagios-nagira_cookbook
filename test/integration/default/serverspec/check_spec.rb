@@ -1,4 +1,5 @@
 require 'serverspec'
+#require 'spec_helper.rb'
 
 include Serverspec::Helper::Exec
 include Serverspec::Helper::DetectOS

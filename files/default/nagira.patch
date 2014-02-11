@@ -1,5 +1,5 @@
 --- /tmp/nagira 2014-02-09 03:46:51.891958000 +0000
-+++ nagira      2014-02-09 15:07:20.675958000 +0000
++++ nagira      2014-02-10 21:11:08.915958000 +0000
 @@ -43,7 +43,7 @@
  RACK_ENV=${RACK_ENV:-production}
  NAGIRA_USER=${NAGIRA_USER:-nagios}
@@ -9,12 +9,15 @@
  # There's no default for NAGIOS_CFG_FILE. Default is actually to have
  # it unset, Nagira would be able to find nagios config if it is in one
  # of the standard locations (/etc or /usr/local). If your Nagios
-@@ -57,8 +57,8 @@
+@@ -55,10 +55,7 @@
+ export RACK_ENV NAGIRA_LOG NAGIRA_USER RVM_STRING
+
  get_pid () {
- # ps -U ${
- # ps -C ruby -o pid,comm,cmd
+-# ps -U ${
+-# ps -C ruby -o pid,comm,cmd
 -     #echo $(ps axo pid,command | awk '$2 ~ /ruby/ && $3 ~ /nagira/ {print $1}')
 -     echo $(ps -C ruby -o pid,cmd | awk '$2 ~ /^\/usr.*bin\/nagira *$/ {print $1}')
 +     echo $(ps axo pid,command | awk '$2 ~ /ruby/ && $3 ~ /nagira/ {print $1}')
-+     #echo $(ps -C ruby -o pid,cmd | awk '$2 ~ /^\/usr.*bin\/nagira *$/ {print $1}')
  }
+
+
