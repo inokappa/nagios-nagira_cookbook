@@ -6,8 +6,9 @@ driver_config:
 platforms:
 - name: ubuntu
   driver_config:
-    image: inokappa/ubuntu
-    socket: tcp://127.0.0.1:4243
+    image: inokappa/wheezy-7.2-basic
+    socket: tcp://172.16.80.70:4243
+
 suites:
 - name: default
   run_list: [
