@@ -1,5 +1,5 @@
 #
-include_recipe 'htpasswd'
+#include_recipe 'htpasswd'
 #
 %w(build-essential g++ libssl-dev nagios3 ruby2.0 ruby2.0-dev).each do |pkg|
   package pkg do
@@ -22,10 +22,10 @@ gem_package "nagira" do
   only_if {File.exists?("/usr/bin/gem")}
 end
 
-node[:nagios][:users].each do |u|
+node[:nagios][:users].each do |user|
   htpasswd "/etc/nagios3/htpasswd.users" do
-    user u[:user]
-    password u[:password]
+    user user[:user]
+    password user[:password]
   end
 end
 
