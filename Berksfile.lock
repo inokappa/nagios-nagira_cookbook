@@ -1,0 +1,12 @@
+{
+  "sources": {
+    "nagios-nagira_cookbook": {
+      "path": "."
+    },
+    "htpasswd": {
+      "locked_version": "0.0.3",
+      "git": "https://github.com/Youscribe/htpasswd-cookbook.git",
+      "ref": "197a76b9f16baa9c240f030330e6f96c8ef5fd87"
+    }
+  }
+}

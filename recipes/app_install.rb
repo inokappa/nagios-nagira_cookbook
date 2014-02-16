@@ -1,4 +1,6 @@
 #
+#include_recipe 'htpasswd'
+#
 %w(build-essential g++ libssl-dev nagios3 ruby2.0 ruby2.0-dev).each do |pkg|
   package pkg do
     action :install
@@ -18,6 +20,13 @@ end
 gem_package "nagira" do
   action :install
   only_if {File.exists?("/usr/bin/gem")}
+end
+
+node[:nagios][:users].each do |user|
+  htpasswd "/etc/nagios3/htpasswd.users" do
+    user user[:user]
+    password user[:password]
+  end
 end
 
 cookbook_file "/tmp/nagira" do
